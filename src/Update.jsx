@@ -16,7 +16,7 @@ function Update() {
 const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3000/users/' + id)
+    axios.get('https://cruduserserver.onrender.com/users/' + id)
       .then(res => {
         setData(res.data);
       })
@@ -25,7 +25,7 @@ const navigate = useNavigate();
 
   const handleUpdate = (event)=>{
     event.preventDefault();
-    axios.put('http://localhost:3000/users/'+ id,values)
+    axios.put('https://cruduserserver.onrender.com/users/'+ id,values)
     .then(res => {
       console.log(res);
       navigate('/')
